@@ -1,7 +1,7 @@
 
 // midi numbers vs note names: http://www.midimountain.com/midi/midi_note_numbers.html
-var notes = [48, 50, 52, 53, 55, 57, 59]
-//var notes = [60, 62, 64, 65, 67, 69, 71]
+var notes = [48, 50, 52, 53, 55, 57, 59, 60]
+//var notes = [60, 62, 64, 65, 67, 69, 71, 72]
 
 var current_col = 0;
 var rows = 8
@@ -80,9 +80,9 @@ $().ready(function () {
     }
   });
 
-  for(var i=0; i<rows; i++){
+  for(var i=(rows-1); i>=0; i--){//want 0,0 to be the bottom left.
     $('#buttongrid_1').append('<tr id="row_' + i + '">');
-    for(var j=0; j<cols; j++){
+    for(var j=0; j<cols; j++){ 
       $('#row_' + i).append('<td id="cell_' + i + '_' + j + '" width="20" height="20"> </td>');
       $('#cell_' + i + '_' + j).bind('click', function(event) {
 
