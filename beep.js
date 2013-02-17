@@ -104,4 +104,18 @@ $().ready(function () {
     clearInterval(loopInterval)
     loopInterval = null
   });
+
+  $('#volumeSlider').bind('change', function(event) {
+    var volume = $('#volumeSlider').val();
+    MIDI.setVolume(0, volume);
+    $('#currVolume').text( Math.round(100*volume/127) + '%');
+  });
+
+  $('#bpmSlider').bind('change', function(event) {
+    bpm = 2 * $('#bpmSlider').val();
+    clearInterval(loopInterval)
+    loopInterval = setInterval(function(){handleCol()},1000*60/bpm);
+    $('#currBPM').text(bpm/2);
+  });
+  
 });

@@ -1,5 +1,5 @@
 .buttongrid {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 td.selected {
@@ -11,14 +11,42 @@ td.selected.current {
 }
 
 .unselectable {
-   -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 
-   /*
-     Introduced in IE 10.
-     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
-   */
-   -ms-user-select: none;
-   user-select: none;
+  /*
+   Introduced in IE 10.
+   See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.controlsArea {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 2px solid #666666;
+  border-radius: 6px;
+}
+
+div.buttonArea {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: 2px solid #666666;
+  border-radius: 6px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: #fff;
+  height: 6px;
 }

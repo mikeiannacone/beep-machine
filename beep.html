@@ -26,15 +26,34 @@
 
 <div id="body-ready" style="display: none">
 
-  <form >
-    <input type="button" id="goButton" value="go!">
-    <input type="button" id="stopButton" value="stop!">
-  </form>
+  <div class="buttonArea">
+    <table border="1" class="buttongrid unselectable" id="buttongrid_1"></table>
+  </div>
 
   <br>
 
-  <table border="1" class="buttongrid unselectable" id="buttongrid_1">
-  </table>
+  <div class="controlsArea">
+    <form>
+      <input type="button" id="goButton" value="go!" />
+      <input type="button" id="stopButton" value="stop!" />
+      <br>
+      <table id="sliderTable">
+        <tr>
+          <td>volume: </td>
+          <td><input type="range" min="0" max="127" value="127" id="volumeSlider" /> </td>
+          <td>Current Volume: </td>
+          <td><span id="currVolume">100%</span> </td>
+        </tr>
+        <tr>
+          <td>BPM: </td>
+          <td><input type="range" min="40" max="360" value="120" id="bpmSlider" /> </td>
+          <td>Current BPM: </td>
+          <td><span id="currBPM">120</span> </td>
+        </tr>
+      <table>
+    </form>
+  </div>
+
 </div>
 
 <script src="./beep.js" type="text/javascript"></script>
