@@ -33,7 +33,7 @@
   <br>
 
   <div class="controlsArea">
-    <form>
+    <form id="controlsForm">
       <input type="button" id="goButton" value="go!" />
       <input type="button" id="stopButton" value="stop!" />
       <br>
@@ -51,6 +51,15 @@
           <td><span id="currBPM">120</span> </td>
         </tr>
       <table>
+      <table id="dropdown table">
+        <tr>
+          <td>Number of Measures: </td>
+          <td>
+            <input type="number" name="measures" id="numMeasures"
+                min="1" max="12" step="1" value="1">
+          </td>
+        </tr>
+      </table>
     </form>
   </div>
 
